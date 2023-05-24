@@ -1,5 +1,6 @@
 body{
     margin: 0;
+   background-color: gray;
 }
 ul {
     list-style-type: none;
@@ -7,7 +8,7 @@ ul {
     padding: 0;
     width: 25%;
     height: 100%;
-    background-color: orange;
+    background-color: darkgray;
     overflow: auto;
    
   }
@@ -23,11 +24,32 @@ ul {
     color:black;
     padding: 8px 16px;
     text-decoration: none;
+    display:inline-block;
+    text-align: center;
+   
   }
   
   
   /* Change the link color on hover */
   li a:hover {
-    background-color:blue;
-    color: white;
+    background-color:lightgray ;
+    color: black;
+   
+  }
+
+
+  p{
+    font-family:'Times New Roman', Times, serif ;
+    position: absolute;
+    margin-top: 2.5em;
+    color:black;
+    position: absolute;
+    
+    
+  }
+  h1{
+    text-align: center;
+    color:whitesmoke
+    
+    
   }

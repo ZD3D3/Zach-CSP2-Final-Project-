@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <title>Zach's Paint Splatter Project </title> 
+  </head>
+  <body>
+
+  </body>
+ 
+<script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+	<script>
+		function setup() {
+  createCanvas(400, 400);
+  frameRate(30);
+     background(0, 0, 0);
+  
+}
+
+var Walker = function(){
+    this.x = random(width);
+    this.y = random(height);
+};
+
+Walker.prototype.display = function(){
+    var randomH = random(0,255);
+    var randomG = random(0,255);
+    var randomI = random(0,255);
+
+    stroke(randomH, randomG, randomI);
+    fill(0, 0, 0);
+    var borderX = constrain(this.x, 0, width);
+    var borderY = constrain(this.y, 0, height);
+    rect(borderX,borderY,10,10);
+};
+
+  Walker.prototype.walk = function() {
+        var numX = randomGaussian(0,0.5);
+        var numY = randomGaussian(0,0.5)
+   //var xStepSize = standardDeviation  * numX + mean;
+  // var yStepSize = standardDeviation * numY + mean;
+  
+    //this.x += xStepSize;
+   // this.y += yStepSize;
+};
+
+function draw() {
+var walker = new Walker();
+     walker.walk();
+     walker.display();
+}
+	</script>
+  
+</html>

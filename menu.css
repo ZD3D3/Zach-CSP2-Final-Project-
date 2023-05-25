@@ -1,8 +1,8 @@
-body{
+body.menu{
     margin: 0;
    background-color: gray;
 }
-ul {
+ul.menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -13,11 +13,11 @@ ul {
    
   }
   /* makes the nav bar  horizontal (remove for vertical)*/
-  li{
+  li.menu{
     float: left;
   }
 
-  li a {
+  li.menu a {
     display: inline;
     list-style: none;
     display: block;
@@ -25,20 +25,20 @@ ul {
     padding: 8px 16px;
     text-decoration: none;
     display:inline-block;
-    text-align: center;
+    
    
   }
   
   
   /* Change the link color on hover */
-  li a:hover {
+  li.menu a:hover {
     background-color:lightgray ;
     color: black;
    
   }
 
 
-  p{
+ p.menu{
     font-family:'Times New Roman', Times, serif ;
     position: absolute;
     margin-top: 2.5em;
@@ -47,7 +47,7 @@ ul {
     
     
   }
-  h1{
+  h1.menu{
     text-align: center;
     color:whitesmoke
     

@@ -14,7 +14,6 @@ ul.menu {
   }
   /* makes the nav bar  horizontal (remove float left for vertical)*/
   li.menu{
-    top: 0;
     float: left;
    position: fixed;
    margin-top: 100px;

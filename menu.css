@@ -1,3 +1,4 @@
+/*CSS for the body makes the background grew*/
 body.menu{
     margin: 0;
    background-color: gray;
@@ -16,9 +17,12 @@ ul.menu {
   li.menu{
     float: left;
     top: 0;
+   margin-left: 5px;
   }
 
   li.menu a {
+    border-color: lightgray;
+    border-style: groove;
     display: inline;
     list-style: none;
     display: block;
@@ -27,29 +31,57 @@ ul.menu {
     text-decoration: none;
     display:inline-block;
     
+    
   }
   
   
   /* Change the link color on hover */
   li.menu a:hover {
+    border-style: inset;
     background-color:lightgray ;
     color: black;
    
   }
 
-
+/*CSS for pragraph elements (Note a and a:hover are for pragraph elements with links )*/
  p.menu{
     font-family:'Times New Roman', Times, serif ;
     position: absolute;
     margin-top: 2.5em;
     color:black;
-    position: absolute;
+    margin-top: 50px;
+    text-align: center;
+    margin-left: 50px;
     
     
   }
+
+ 
+  p.menu a{
+    text-decoration-line:overline;
+     color: darkgray;
+     text-decoration: none;
+     border-style: inset;
+    
+     
+  }
+
+  p.menu a:hover{
+    border-style: solid;
+  }
+
+  /*CSS to make header 1 look nice */
   h1.menu{
     text-align: center;
     color:whitesmoke
-    
-    
+  }
+
+  h1.menu a{
+    text-decoration: none;
+    color: aliceblue;  
+  }
+  h1.menu a:hover{
+    border-style: inset;
+    color: antiquewhite;
+    border-color: bisque;
   }

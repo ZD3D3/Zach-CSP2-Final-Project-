@@ -1,10 +1,13 @@
 /*CSS for the body makes the background grew*/
 body.menu{
-    margin: 0;
+   margin: 0;
+   margin-top: 60px;
    background-color: gray;
 }
+/*  Ul so Nav bar works Note(Had to change from using li to a div with the <a> HTML tag so nav bar could be fixed and still work)*/
 ul.menu {
     list-style-type: none;
+    top: 0;
     margin: 0;
     padding: 0;
     width: 25%;
@@ -13,45 +16,50 @@ ul.menu {
     overflow: auto;
    
   }
-  /* makes the nav bar  horizontal (remove float left for vertical)*/
-  li.menu{
-    float: left;
+
+  
+  div.menu{
+    overflow: hidden;
+    position: fixed;
     top: 0;
-   margin-left: 5px;
+    width: 100%;
   }
 
-  li.menu a {
+  
+   /* makes the nav bar  horizontal (remove float left for vertical)*/
+  div.menu a{
     border-color: lightgray;
     border-style: groove;
     display: inline;
     list-style: none;
     display: block;
     color:black;
-    padding: 14px 16px;
-    text-decoration: none;
-    display:inline-block;
-    
-    
+    float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
   }
-  
-  
   /* Change the link color on hover */
-  li.menu a:hover {
+  div.menu a:hover{
     border-style: inset;
+    padding-bottom: 20px;
     background-color:lightgray ;
     color: black;
    
   }
 
+ 
+  
+
+  
 /*CSS for pragraph elements (Note a and a:hover are for pragraph elements with links )*/
  p.menu{
     font-family:'Times New Roman', Times, serif ;
-    position: absolute;
-    margin-top: 2.5em;
+    position: center;
     color:black;
-    margin-top: 50px;
     text-align: center;
-    margin-left: 50px;
+   
     
     
   }
@@ -84,4 +92,12 @@ ul.menu {
     border-style: inset;
     color: antiquewhite;
     border-color: bisque;
+  }
+
+  /*CSS to make header 2 look nice (note: border css same as h1)*/
+  h2.menu{
+    border-style: inset;
+    color: antiquewhite;
+    border-color: bisque;
+    text-align: center;
   }

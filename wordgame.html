@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>WORD GAME PROJECT ZACH </title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: orange;
+            }
+            form {
+                font-size: 1.5em;
+            }
+            .scrambled, input, button {
+                font-family: monospace;
+                font-size: 2em;
+            }
+            
+            #result{
+                background: rgb(255, 222, 161);
+                border:2px dotted orange;
+                font-size:2em;
+                height: 50px;
+                margin-top: 20px;
+            }
+            
+            .correct{
+                background:green;
+                border:2em solid #006400;
+                font-size:20px;
+            }
+            
+            .wrong{
+                background:red;
+                border:2em dotted #5f0719;
+                font-size:20px;
+            }
+            
+        </style>
+    </head>
+    <body>
+    
+    <h1>Zach's Word game!</h1>
+    <button onclick="start();">Start</button>
+    
+    <form id="joke-form">
+        <label>
+            Unscramble these letters to form a word:<Br>
+            <span id ="joke-answer" class="scrambled"></span>
+            <br>
+            <input type="text" size="10" name="input">
+        </label>
+        <button type="submit">Check</button>
+    </form>
+    <div id = "result"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    
+    var anslist = ["word","world","wall","width","jquery","wordle"]
+    var scrWord = ["owdr","wrold","alwl","gtdiw","reyjuq","worlde"]
+
+        // when the user submits the form,
+        //   check that their answer is correct
+        //   and show them appropriate message
+        
+        //Start Function
+        var rnd;
+        var score;
+        var ansStreak;
+        function start(){
+        rnd = Math.floor(Math.random() * scrWord.length)
+            $("#joke-answer").text(scrWord[rnd]);  
+        } 
+
+            //Form stuff
+        $("#joke-form").on("submit", function(event){
+            event.preventDefault();
+
+         var answer = $("#joke-form").find("[name=input]").val();
+
+        if(answer === anslist[rnd]){
+            $("#result").text("Correct").addClass("correct");
+            score++;
+            ansStreak++
+            start();
+            document.getElementById("joke-form").reset();
+        
+        } else{
+            $("#result").addClass("wrong").text("Wrong!")
+            ansStreak == 0;
+        }
+         });
+        
+         
+    </script>
+    </body>
+</html>
